@@ -62,7 +62,8 @@ Technology	Role
 
 
 **🗂️ Project Structure**
-Blood-Bank/
+
+``Blood-Bank/
 │
 ├── admin/                # Admin panel (manage stock, users, reports)
 ├── donor/                # Donor dashboard and profile management
@@ -71,7 +72,7 @@ Blood-Bank/
 ├── assets/               # CSS, JS, images, and SCSS files
 ├── database/             # SQL files and schema
 ├── index.php             # Homepage / login
-└── README.md             # Project documentation
+└── README.md             # Project documentation``
 
 **⚙️ Setup Instructions**
 
@@ -83,13 +84,13 @@ Update the database credentials in includes/config.php.
 
 Run the project using XAMPP or WAMP and open in your browser at:
 
-http://localhost/Blood-Bank/
+``http://localhost/Blood-Bank/``
 
 
 **Default Admin Login:**
-
+``
 Username: admin
-Password: admin123
+Password: admin123``
 
 **🔒 Security Notes**
 
