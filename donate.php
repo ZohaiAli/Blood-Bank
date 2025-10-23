@@ -2,299 +2,230 @@
 <html lang="en">
 
 <head>
-    <!-- Required meta tags-->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-   
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blood Bank | Donate Blood</title>
 
-    <!-- Title Page-->
-    <title>Blood Bank</title>
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Icons font CSS-->
-    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
-    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
-    
-    <!-- Main CSS-->
-    <link href="css/main.css" rel="stylesheet" media="all">
- <link rel="shortcut icon" href="assets/images/logo2.jpg" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="assets/images/fav.jpg">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
-	
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 
-<style>
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
-.loader_bg{
-    position: fixed;
-    z-index: 999999;
-    background: #fff;
-    width: 100%;
-    height: 100%;
-}
-.loader{
-    border: 0 soild transparent;
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    position: absolute;
-    top: calc(50vh - 75px);
-    left: calc(50vw - 75px);
-}
-.loader:before, .loader:after{
-    content: '';
-    border: 1em solid #A70F00;
-    border-radius: 50%;
-    width: inherit;
-    height: inherit;
-    position: absolute;
-    top: 0;
-    left: 0;
-    animation: loader 2s linear infinite;
-    opacity: 0;
-}
-.loader:before{
-    animation-delay: .5s;
-}
-@keyframes loader{
-    0%{
-        transform: scale(0);
-        opacity: 0;
+  <link rel="shortcut icon" href="assets/images/logo2.jpg" type="image/x-icon">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f8f9fa;
+      scroll-behavior: smooth;
     }
-    50%{
-        opacity: 1;
+
+    /* Navbar */
+    .navbar {
+      background: #A70F00;
     }
-    100%{
-        transform: scale(1);
-        opacity: 0;
+
+    .navbar-brand,
+    .nav-link {
+      color: #fff !important;
+      font-weight: 500;
+      transition: 0.3s;
     }
-}
 
+    .nav-link:hover {
+      color: #ffdddd !important;
+    }
 
+    /* Hero Section */
+    .hero {
+      position: relative;
+      height: 70vh;
+      background: url('assets/images/banner2.0.jpeg') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+    }
 
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+    }
 
-#abc{
-  width:100%;
-  height:40px;
-  background-size: cover;
-  position:relative;
-}
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
 
-nav{
-  width: 100%;
-  height: 100px;
-  line-height: 50px;
-}
-nav ul{
-  float: left;
-  margin-right: 10px;
-}
-nav ul li{
-  list-style-type: none;
-  display: inline-block;
-  transition: 0.7s all;
-}
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+    }
 
+    .hero p {
+      font-size: 1.25rem;
+    }
 
-nav ul li a{
-  text-decoration: none;
-  color: black;
-  padding: 20px;
-  
-}
-nav ul li:hover{
-  background-color:red;
-  color:white;
-}
+    /* Form Card */
+    .donation-form {
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      margin-top: -80px;
+    }
 
+    .form-label {
+      font-weight: 600;
+    }
 
-nav ul li a:hover{
-  color:white;
-}
-</style>
+    .btn-primary {
+      background-color: #A70F00;
+      border: none;
+      transition: 0.3s;
+    }
 
-</head>
-<body>
-        
-        
-        <div class="loader_bg">
-    <div class="loader"></div>
-</div>
-    <!-- ################# Banner Starts Here#######################--->
+    .btn-primary:hover {
+      background-color: #870C00;
+    }
 
-      <div id="abc">
-    <nav>
-        <ul>
-            <li><a href="index.php">Home</a></li>
-            <li><a href="donate.php">Donate</a></li>
-            <li><a href="#">seeker</a></li>
-            <li><a href="aboutus.php">About us</a></li>
-            <li><a href="contactus.php">Contact Us</a></li>
-        </ul>
-    </nav>
-	
-</div>
- <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active">
+    footer {
+      background: #A70F00;
+      color: white;
+      padding: 1rem 0;
+      text-align: center;
+      margin-top: 5rem;
+    }
 
-            </ol>
-            
-                
-                    <img class="d-block w-100" src="assets/images/banner2.0.jpeg" alt="First slide">
-                    <div class="carousel-caption d-none d-md-block">
-      			
-               
-
-            </div>
-   
-       
-
-
-    </div>
-
-    <div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins">
-        <div class="wrapper wrapper--w680">
-            <div class="card card-4">
-                <div class="card-body">
-                    <h2 class="title">Donation Form</h2>
-                    <form method="POST">
-                        <div class="row row-space">
-                            <div class="col-2">
-                                <div class="input-group">
-                                    <label class="label">first name</label>
-                                    <input class="input--style-4" type="text" name="first_name">
-                                </div>
-                            </div>
-                            <div class="col-2">
-                                <div class="input-group">
-                            <label class="label">Blood Group</label>
-                            <div class="rs-select2 js-select-simple select--no-search">
-                                <select name="subject">
-                                    <option disabled="disabled" selected="selected">Choose option</option>
-                                    <option>A</option>
-                                    <option>B</option>
-                                    <option>AB</option>
-                                    <option>O</option>
-                                </select>
-                                <div class="select-dropdown"></div>
-                            </div>
-                        </div>
-                            </div>
-                        </div>
-                        <div class="row row-space">
-                            <div class="col-2">
-                                <div class="input-group">
-                                    <label class="label">AGE</label>
-                                    <div class="input-group-icon">
-                                        <input class="input--style-4 js-datepicker" type="text" name="AGE">
-                                        <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-2">
-                                <div class="input-group">
-                                    <label class="label">Gender</label>
-                                    <div class="p-t-10">
-                                        <label class="radio-container m-r-45">Male
-                                            <input type="radio" checked="checked" name="gender">
-                                            <span class="checkmark"></span>
-                                        </label>
-                                        <label class="radio-container">Female
-                                            <input type="radio" name="gender">
-                                            <span class="checkmark"></span>
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-						<div class="col-2">
-                        <div class="input-group">
-                            <label class="label">Location</label>
-                            <div class="rs-select js-select-simple select--no-search">
-                                <select name="subject">
-                                    <option disabled="disabled" selected="selected">Choose option</option>
-                                    <option>Nazimabad</option>
-                                    <option>DHA</option>
-                                    <option>Liyari</option>
-                                    <option>Tariq Road</option>
-                                </select>
-                                
-                            </div>
-							
-                        </div>
-						
-						</div>
-						<div class="col-2">
-                                <div class="input-group">
-                                    <label class="label">CNIC</label>
-                                    <input class="input--style-4" type="text" name="cnic">
-                                </div>
-                            </div>
-						<div class="col-2">
-                                <div class="input-group">
-                                    <label class="label">Last Donate</label>
-                                    <input type="date"class="input--style-2" type="text" name="phone">
-                                </div>
-                            </div>
-                            <div class="col-2">
-                                <div class="input-group">
-                                    <label class="label">Phone Number</label>
-                                    <input class="input--style-4" type="text" name="phone">
-                                </div>
-                            </div>
-                        </div>
-                       <div class="col-lg-12" style="text-align:center;">
-                        <div class="p-t-15">
-                            <button class="btn btn--radius-2 btn--blue" type="submit">Submit</button>
-                        </div>
-						</div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-
-       <!--*************** Footer  Starts Here *************** -->
-     <footer id="contact" class="container-fluid">
-       
-            <div class="footer-copy">
-                <div class="row">
-                    <div class="col-lg-8 col-md-6">
-                        <p>Copyright © bloodbank.com</a> | All right reserved.</p>
-                    </div>
-                    
-                </div>
-            </div>
-        </div>
-    </footer>
-    
-      
-    
-</body>
-  <!-- Jquery JS-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-		
-    <!-- Main JS-->
-    <script src="js/global.js"></script>
-    <script src="assets/js/jquery-3.2.1.min.js"></script>
-    <script src="assets/js/popper.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/plugins/grid-gallery/js/grid-gallery.min.js"></script>
-    <script src="assets/plugins/scroll-fixed/jquery-scrolltofixed-min.js"></script>
-    <script src="assets/js/script.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script>
-    var win = navigator.platform.indexOf('Win') > -1;
-    if (win && document.querySelector('#sidenav-scrollbar')) {
-      var options = {
-        damping: '0.5'
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2rem;
       }
-      Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
+
+      .donation-form {
+        margin-top: -40px;
+      }
     }
-	
-	  setTimeout(function(){
-            $('.loader_bg').fadeToggle();
-        }, 1500);
-  </script>
- 
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">Blood Bank</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="donate.php">Donate</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Seeker</a></li>
+          <li class="nav-item"><a class="nav-link" href="aboutus.php">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="contactus.php">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Donate Blood, Save Lives</h1>
+      <p>Your small act of kindness can save someone's life today.</p>
+    </div>
+  </section>
+
+  <!-- Donation Form -->
+  <section class="container donation-form">
+    <h2 class="text-center mb-4 text-danger fw-bold">Blood Donation Form</h2>
+    <form method="POST" action="#">
+      <div class="row g-3">
+        <div class="col-md-6">
+          <label class="form-label">Full Name</label>
+          <input type="text" class="form-control" name="first_name" placeholder="Enter your name" required>
+        </div>
+
+        <div class="col-md-6">
+          <label class="form-label">Blood Group</label>
+          <select class="form-select" name="blood_group" required>
+            <option value="" disabled selected>Choose...</option>
+            <option>A+</option>
+            <option>A-</option>
+            <option>B+</option>
+            <option>B-</option>
+            <option>AB+</option>
+            <option>AB-</option>
+            <option>O+</option>
+            <option>O-</option>
+          </select>
+        </div>
+
+        <div class="col-md-6">
+          <label class="form-label">Age</label>
+          <input type="number" class="form-control" name="age" min="18" max="65" required>
+        </div>
+
+        <div class="col-md-6">
+          <label class="form-label">Gender</label>
+          <select class="form-select" name="gender" required>
+            <option value="" disabled selected>Select gender</option>
+            <option>Male</option>
+            <option>Female</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div class="col-md-6">
+          <label class="form-label">Location</label>
+          <select class="form-select" name="location" required>
+            <option value="" disabled selected>Choose location</option>
+            <option>Nazimabad</option>
+            <option>DHA</option>
+            <option>Liyari</option>
+            <option>Tariq Road</option>
+          </select>
+        </div>
+
+        <div class="col-md-6">
+          <label class="form-label">CNIC</label>
+          <input type="text" class="form-control" name="cnic" placeholder="XXXXX-XXXXXXX-X" pattern="[0-9]{5}-[0-9]{7}-[0-9]{1}" required>
+        </div>
+
+        <div class="col-md-6">
+          <label class="form-label">Last Donation Date</label>
+          <input type="date" class="form-control" name="last_donate" required>
+        </div>
+
+        <div class="col-md-6">
+          <label class="form-label">Phone Number</label>
+          <input type="tel" class="form-control" name="phone" placeholder="03XXXXXXXXX" pattern="[0-9]{11}" required>
+        </div>
+
+        <div class="col-12 text-center mt-4">
+          <button type="submit" class="btn btn-primary px-5 py-2">Submit</button>
+        </div>
+      </div>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p class="mb-0">&copy; 2025 BloodBank.com | All Rights Reserved.</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
 </html>
